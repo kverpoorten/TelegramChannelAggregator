@@ -1,5 +1,5 @@
 [Unit]
-Description=NfiXTelegramAggregator Bot
+Description=TelegramChannelAggregator Bot
 After=multi-user.target
 
 [Service]
