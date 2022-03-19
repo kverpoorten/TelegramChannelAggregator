@@ -46,13 +46,13 @@ api_hash = o6la4h1158ylt4mzhnpio6la
 ```
 
 #### Telegram bot_token and chat_id
-The other set of values are used to sent notifications to you in the aggregation chat.
+The other set of values are used to send notifications to you in the aggregation chat.
 -   First you need to create a bot to get a bot_token
 -   Open telegram and search for 'BotFather' start a conversation
 -   Type: `/newbot`
 -   Answer the questions it asks after doing this (which get the name of it, etc).
--   When you've completed step 2, you will be provided a bot_token that looks something like this: 123456789:alphanumeric_characters.
--   Type /start now in the same dialog box to enable and instantiate your brand new bot.
+-   When you've completed step 2, you will be provided a bot_token that looks something like this: `123456789:alphanumeric_characters`.
+-   Type `/start` now in the same dialog box to enable and instantiate your brand new bot.
 
 Then you need the chat id, you can do that by opening the following url
 ```
@@ -134,7 +134,7 @@ TelegramChannelAggregator Bot started and monitoring 2 chats:
 ## Start Automatically
 If you want the script to run automatically after a reboot and you want it to keep running after you close the console, this can be done by installing it as a service
 
-Example service files `TelegramChannelAggregator.service`is provided. You need to edit the paths and your user inside them to reflect your install. 
+Example service file `TelegramChannelAggregator.service`is provided. You need to edit the paths and your user in this file to reflect your install. 
 Then install the service as describe below.
 ```
 $ sudo cp TelegramChannelAggregator.service /etc/systemd/system/
