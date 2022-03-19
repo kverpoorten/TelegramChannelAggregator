@@ -114,7 +114,7 @@ The section for each channel needs to start with `channel-`
 The name is the exact name of the channel in Telegram.
 
 The filter is a [regular expression](https://docs.python.org/3/howto/regex.html) which is used to filter all incoming messages in that channel.
-For example if you want to filter messages that contain either the word "buying" or the word "selling" the filter expression would be `buying|selling`.
+For example if you want to filter messages that contain either the word "buying" or the word "selling" the filter expression would be `.*(buying|selling).*`.
 
 ## First run
 The first time you start the bot, make sure to do it on the command line as follows:
@@ -127,8 +127,8 @@ This only happens the first time to initialize the Telegram connection for your 
 At startup the bot will send you a message on Telegram showing which chats it is monitoring and which filters are used for each of these channels, it looks something like this:
 ```
 TelegramChannelAggregator Bot started and monitoring 2 chats:  
-1. "MyInterestingChannel-1" with filter "money|profit"  
-2. "MyInterestingChannel-2" with filter "selling|buying"
+1. "MyInterestingChannel-1" with filter ".*(money|profit).*"  
+2. "MyInterestingChannel-2" with filter ".*(selling|buying).*"
 ```
 
 ## Start Automatically
