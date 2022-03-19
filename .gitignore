@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# telegram session files
+*.session
+
+# config file
+config.ini

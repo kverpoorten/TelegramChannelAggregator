@@ -1,0 +1,13 @@
+[Unit]
+Description=NfiXTelegramAggregator Bot
+After=multi-user.target
+
+[Service]
+# Set WorkingDirectory and ExecStart to your file paths accordingly
+WorkingDirectory=/home/kristof/TelegramChannelAggregator
+ExecStart=/usr/bin/python3 /home/kristof/TelegramChannelAggregator/TelegramChannelAggregator.py
+User=kristof
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
