@@ -40,7 +40,7 @@ async def tg_incoming_message_handler(event):
 
         if (chats_to_monitor[event.message.sender_id].test_filter(event.message.message.lower()) == True):
             logging.debug("Found a match! Forwarding message to aggregation chat")
-            await send_tg_message(event.message.message)
+            await send_tg_message(event.message)
 
 
 @client.on(events.NewMessage(outgoing=True))
