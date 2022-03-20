@@ -5,6 +5,7 @@
 
 **The solution**: Run this TelegramChannelAggregator Bot which can filter out only specific messages from many chats, which are then all sent to one single chat. 
 This allows you to mute all other chats and only keep notifications enabled for this single chat that contains only interesting messages.
+
 Optionally you can also forward commands to many monitored bots at once and get all responses back in the single chat where you entered the command.
 
 ## Download and install
