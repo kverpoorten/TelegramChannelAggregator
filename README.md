@@ -108,13 +108,18 @@ Define a channel in the config as follows
 [channel-anything-you-want-here]
 name = The Name of the channel in Telegram
 filter = a regular expression to filter incoming messages
+forward_commands = 1
 ```
 The section for each channel needs to start with `channel-` 
 
-The name is the exact name of the channel in Telegram.
+The `name` setting contains is the exact name of the channel in Telegram.
 
-The filter is a [regular expression](https://docs.python.org/3/howto/regex.html) which is used to filter all incoming messages in that channel.
+The `filter` setting is a [regular expression](https://docs.python.org/3/howto/regex.html) which is used to filter all incoming messages in that channel.
 For example if you want to filter messages that contain either the word "buying" or the word "selling" the filter expression would be `.*(buying|selling).*`.
+
+The `forward_commands` setting configured if you want to forward commands entered in the aggregation chat **by you** to the monitored channel. If set to `1` this
+will happen and the first message following that forwarded command will be relayed back to the aggregation chat.
+This way you can give a command to many monitored bots at once and get all responses relayed back to you.
 
 ## First run
 The first time you start the bot, make sure to do it on the command line as follows:
