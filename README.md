@@ -6,6 +6,8 @@
 **The solution**: Run this TelegramChannelAggregator Bot which can filter out only specific messages from many chats, which are then all sent to one single chat. 
 This allows you to mute all other chats and only keep notifications enabled for this single chat that contains only interesting messages.
 
+Optionally you can also forward commands to many monitored bots at once and get all responses back in the single chat where you entered the command.
+
 ## Download and install
 
 You need run Python 3.7 or higher.
@@ -117,7 +119,7 @@ The `name` setting contains is the exact name of the channel in Telegram.
 The `filter` setting is a [regular expression](https://docs.python.org/3/howto/regex.html) which is used to filter all incoming messages in that channel.
 For example if you want to filter messages that contain either the word "buying" or the word "selling" the filter expression would be `.*(buying|selling).*`.
 
-The `forward_commands` setting configured if you want to forward commands entered in the aggregation chat **by you** to the monitored channel. If set to `1` this
+The `forward_commands` setting configures if you want to forward commands entered in the aggregation chat **by you** to the monitored channel. If set to `1` this
 will happen and the first message following that forwarded command will be relayed back to the aggregation chat.
 This way you can give a command to many monitored bots at once and get all responses relayed back to you.
 
